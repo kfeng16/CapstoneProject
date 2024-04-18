@@ -31,6 +31,8 @@ albedo_texture = SubResource("CompressedTexture2D_138k6")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_ej72d")
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.898771, -0.438418, 0, 0.438418, 0.898771, -3.31395, 1.25482, 0.161698)
 
@@ -45,7 +47,7 @@ shape = SubResource("WorldBoundaryShape3D_0b53g")
 mesh = SubResource("PlaceholderMesh_auscp")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 0.171929, 0.985109, 0, -0.985109, 0.171929, 0.0823451, 2.80554, 4.02508)
+transform = Transform3D(1, 0, 0, 0, 0.171929, 0.985109, 0, -0.985109, 0.171929, -0.518244, 3.10129, 4.17016)
 material_override = SubResource("StandardMaterial3D_5a03h")
 size = Vector3(1, 6.55029, 1)
 
