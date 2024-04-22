@@ -34,13 +34,13 @@ metallic_specular = 0.85
 material = SubResource("StandardMaterial3D_ylk4m")
 
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.00136, -26.0707, 15.1622)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162577, -10.3991, 13.8558)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f770j")
 
 [node name="Walls" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -180)
+transform = Transform3D(1, -4.80841e-11, 1.3612e-08, 3.70898e-11, 1, 1.9095e-11, -1.25298e-09, 1.00519e-12, 1, -2.68221e-07, 0, -180)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.304, -1.348, 94)
@@ -77,7 +77,7 @@ light_color = Color(0.980392, 0.478431, 0.392157, 1)
 shadow_enabled = true
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(1, 3.79333e-09, 2.81662e-08, 1.14025e-09, 1, -1.30775e-08, 1.86284e-08, -1.02564e-08, 1, -2.98023e-08, 2.80913, 0)
+transform = Transform3D(0.999941, 0.000703898, 0.0108786, -0.000702806, 1, -0.000103814, -0.0108787, 9.61388e-05, 0.999941, 0, 2.80913, 0)
 script = ExtResource("2_xdsfp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
