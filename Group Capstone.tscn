@@ -34,7 +34,7 @@ metallic_specular = 0.85
 material = SubResource("StandardMaterial3D_ylk4m")
 
 [node name="Node3D" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.162577, -10.3991, 13.8558)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500228, -11.2911, 13.4383)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_f770j")
