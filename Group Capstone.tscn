@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=12 format=3 uid="uid://bevecyuh0vots"]
 
-[ext_resource type="Script" path="res://AnimationPlayer.gd" id="1_txlw1"]
-[ext_resource type="Script" path="res://CharacterBody3D.gd" id="2_xdsfp"]
+[ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://Main_character.tscn" id="4_sni3l"]
+[ext_resource type="ArrayMesh" uid="uid://cjdhwhlx1xcx6" path="res://fence_pillar.obj" id="4_t0825"]
+[ext_resource type="Texture2D" uid="uid://byjjnsm23s75k" path="res://halloweenbits_texture.png" id="4_uer1b"]
+[ext_resource type="ArrayMesh" uid="uid://djx34mdgdneti" path="res://arch_gate_right.obj" id="6_14v7n"]
+[ext_resource type="ArrayMesh" uid="uid://cq5om5bpl05lu" path="res://tree_pine_yellow_large.obj" id="7_gmp4o"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_gohxr"]
 
@@ -16,22 +19,20 @@ ambient_light_color = Color(0.764706, 0.572549, 0.905882, 1)
 tonemap_mode = 2
 glow_enabled = true
 
-[sub_resource type="Animation" id="Animation_ytcyc"]
-resource_name = "wall moves"
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xff0s"]
+albedo_texture = ExtResource("4_uer1b")
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_iejg4"]
-_data = {
-"wall moves": SubResource("Animation_ytcyc")
-}
+[sub_resource type="Skin" id="Skin_6ppj7"]
+bind_count = 2
+bind/0/name = &""
+bind/0/bone = -1
+bind/0/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+bind/1/name = &""
+bind/1/bone = -1
+bind/1/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bxqbt"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ylk4m"]
-metallic = 1.0
-metallic_specular = 0.85
-
-[sub_resource type="SphereMesh" id="SphereMesh_i1t7b"]
-material = SubResource("StandardMaterial3D_ylk4m")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcji1"]
+albedo_texture = ExtResource("4_uer1b")
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500228, -11.2911, 13.4383)
@@ -42,6 +43,649 @@ environment = SubResource("Environment_f770j")
 [node name="Walls" type="Node3D" parent="."]
 transform = Transform3D(1, -4.80841e-11, 1.3612e-08, 3.70898e-11, 1, 1.9095e-11, -1.25298e-09, 1.00519e-12, 1, -2.68221e-07, 0, -180)
 
+[node name="Wall Decoration" type="Node3D" parent="Walls"]
+transform = Transform3D(1, 4.80841e-11, -1.3612e-08, -3.70898e-11, 1, -1.9095e-11, 1.25298e-09, -1.00519e-12, 1, -2.14577e-06, 0, 180)
+
+[node name="Node3D2" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, 6.5826)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D2"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D2"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, 3.98113)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D3" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, 6.5826)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D3"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D3"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D4" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, 3.98113)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D4"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D4"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D5" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, 1.47761)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D5"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D5"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D6" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -1.12386)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D6"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D6"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D7" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, 1.47761)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D7"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D7"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D8" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -1.12386)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D8"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D8"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D9" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, -3.56655)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D9"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D9"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D10" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -6.16803)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D10"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D10"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D11" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, -3.56655)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D11"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D11"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D11"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D12" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -6.16803)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D12"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D12"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D13" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, -8.67154)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D13"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D13"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D13"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D14" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -11.273)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D14"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D14"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D14"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D15" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, -8.67154)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D15"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D15"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D15"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D16" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -11.273)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D16"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D16"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D16"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D17" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, -13.7202)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D17"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D17"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D17"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D18" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -16.3217)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D18"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D18"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D18"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D19" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, -13.7202)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D19"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D19"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D19"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D20" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -16.3217)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D20"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D20"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D20"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D21" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, -18.8252)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D21"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D21"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D21"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D22" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -21.4267)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D22"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D22"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D22"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D23" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, -18.8252)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D23"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D23"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D23"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D24" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -21.4267)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D24"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D24"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D24"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D25" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, -23.8694)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D25"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D25"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D25"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D26" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -26.4709)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D26"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D26"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D26"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D27" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, -23.8694)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D27"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D27"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D27"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D28" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -26.4709)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D28"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D28"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D28"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D29" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, -28.9744)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D29"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D29"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D29"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D30" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44623, 0.626016, -31.5758)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D30"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D30"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D30"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
+[node name="Node3D31" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85451, 0.597702, -28.9744)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D31"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D31"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D31"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+
+[node name="Node3D32" type="Node3D" parent="Walls/Wall Decoration"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85104, 0.626016, -31.5758)
+
+[node name="FencePillar3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../FencePillar")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = ExtResource("4_t0825")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = ExtResource("6_14v7n")
+skeleton = NodePath("../..")
+
 [node name="CSGBox3D" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -0.304, -1.348, 94)
 use_collision = true
@@ -49,25 +693,18 @@ size = Vector3(1, 1, 48)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.30196, 2.65199, 94.0829)
+visible = false
 use_collision = true
 size = Vector3(0.001, 1, 48)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="Walls"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 1.69804, 2.65199, 94.0829)
+visible = false
 use_collision = true
 size = Vector3(0.001, 1, 48)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Walls"]
-root_node = NodePath("../../Obstacles")
-libraries = {
-"": SubResource("AnimationLibrary_iejg4")
-}
-speed_scale = 1.829
-movie_quit_on_finish = true
-script = ExtResource("1_txlw1")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.877157, 0.117471, -0.465613, -0.14271, 0.862039, 0.486336, 0.458507, 0.49304, -0.73938, -0.614, 9.436, -10.352)
+transform = Transform3D(-0.877157, 0.117471, -0.465613, -0.14271, 0.862039, 0.486335, 0.458507, 0.49304, -0.73938, -0.55672, 9.42681, -7.4283)
 light_color = Color(0.164706, 0.956863, 0.305882, 1)
 shadow_enabled = true
 
@@ -76,27 +713,118 @@ transform = Transform3D(0.877158, -0.117472, 0.465613, -0.14271, 0.862039, 0.486
 light_color = Color(0.980392, 0.478431, 0.392157, 1)
 shadow_enabled = true
 
-[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
-transform = Transform3D(0.999941, 0.000703898, 0.0108786, -0.000702806, 1, -0.000103814, -0.0108787, 9.61388e-05, 0.999941, 0, 2.80913, 0)
-script = ExtResource("2_xdsfp")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
-transform = Transform3D(0.2, -1.08757e-16, -8.83302e-16, 7.14179e-18, 0.2, 4.83063e-16, 8.88178e-16, -4.44089e-16, 0.2, 2.08165e-12, 0.189, 2.08165e-12)
-shape = SubResource("CapsuleShape3D_bxqbt")
-
-[node name="CSGMesh3D" type="CSGMesh3D" parent="CharacterBody3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0.18934, 0)
-mesh = SubResource("SphereMesh_i1t7b")
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(0.999999, 2.10678e-09, 0.00174528, -0.000451719, 0.965926, 0.258819, -0.00168586, -0.258819, 0.965924, 2.06768e-12, 0.56, 0.665)
-
-[node name="OmniLight3D" type="OmniLight3D" parent="CharacterBody3D"]
+[node name="CharacterBody3D" parent="." instance=ExtResource("4_sni3l")]
+transform = Transform3D(0.999941, 0.000703893, 0.0108786, -0.000702806, 1, -0.000103791, -0.0108787, 9.61388e-05, 0.999941, 0, 0.640898, 0)
 
 [node name="Obstacles" type="Node3D" parent="."]
 
+[node name="CSGBox3D17" type="CSGBox3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.225263, 3.35002, 8.2445)
+use_collision = true
+size = Vector3(4, 5.34375, 1)
+
+[node name="Obstacle Decoration" type="Node3D" parent="Obstacles"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -0.0862074, 0)
+
+[node name="TreePineYellowLarge" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.940508, 0.753062, -2.14968)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge2" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.645483, 0.753062, -1.85596)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge3" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -1.00045, 0.753062, -2.45067)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge4" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -0.585543, 0.753062, -2.41651)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge5" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.444005, 0.753062, -2.74541)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge6" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -0.14898, 0.753062, -2.45168)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge7" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -0.503945, 0.753062, -3.0464)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge8" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -0.0890396, 0.753062, -3.01224)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge9" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.98854, 0.753062, -2.14968)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge10" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.69351, 0.753062, -1.85596)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge11" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -2.04848, 0.753062, -2.45067)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge12" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -1.63357, 0.753062, -2.41651)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge13" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.49203, 0.753062, -2.74541)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge14" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -1.19701, 0.753062, -2.45168)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge15" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -1.55197, 0.753062, -3.0464)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
+[node name="TreePineYellowLarge16" type="MeshInstance3D" parent="Obstacles/Obstacle Decoration"]
+transform = Transform3D(0.152834, 0, 0.129004, 0, 0.2, 0, -0.129004, 0, 0.152834, -1.13707, 0.753062, -3.01224)
+material_override = SubResource("StandardMaterial3D_dcji1")
+mesh = ExtResource("7_gmp4o")
+skeleton = NodePath("../../..")
+
 [node name="CSGBox3D" type="CSGBox3D" parent="Obstacles"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91166, 1.0506, -2.64968)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.91166, 1.0506, -2.58659)
+visible = false
 use_collision = true
 size = Vector3(4, 1, 1)
 
