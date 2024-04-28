@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rvroqek4i4jm"
+path="res://.godot/imported/pumpkin_orange_jackolantern.obj-b10bbe2e1e2d0619f96b0e05b8f85276.mesh"
+
+[deps]
+
+files=["res://.godot/imported/pumpkin_orange_jackolantern.obj-b10bbe2e1e2d0619f96b0e05b8f85276.mesh"]
+
+source_file="res://obj/pumpkin_orange_jackolantern.obj"
+dest_files=["res://.godot/imported/pumpkin_orange_jackolantern.obj-b10bbe2e1e2d0619f96b0e05b8f85276.mesh", "res://.godot/imported/pumpkin_orange_jackolantern.obj-b10bbe2e1e2d0619f96b0e05b8f85276.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

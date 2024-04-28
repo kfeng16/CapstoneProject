@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvdccc17wx7md"
+path="res://.godot/imported/skull_candle.obj-0c64a4406b6974df2dfbb18eea3da1e8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/skull_candle.obj-0c64a4406b6974df2dfbb18eea3da1e8.mesh"]
+
+source_file="res://obj/skull_candle.obj"
+dest_files=["res://.godot/imported/skull_candle.obj-0c64a4406b6974df2dfbb18eea3da1e8.mesh", "res://.godot/imported/skull_candle.obj-0c64a4406b6974df2dfbb18eea3da1e8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
