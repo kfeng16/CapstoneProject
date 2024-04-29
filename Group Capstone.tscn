@@ -39,10 +39,10 @@ bind/1/name = &""
 bind/1/bone = -1
 bind/1/pose = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcji1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64kax"]
 albedo_texture = ExtResource("4_uer1b")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_64kax"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dcji1"]
 albedo_texture = ExtResource("4_uer1b")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ehet"]
@@ -798,6 +798,17 @@ size = Vector3(4, 1, 1)
 transform = Transform3D(-0.999867, 0, 0.0162831, 0, 1, 0, -0.0162831, 0, -0.999867, -0.165494, 1.124, -22.4571)
 use_collision = true
 size = Vector3(4, 2, 1)
+
+[node name="GraveA" type="MeshInstance3D" parent="Obstacles/CSGBox3D15"]
+transform = Transform3D(1, -0.00144436, -6.4199e-05, 0.00144436, 0.996058, 0.0886913, -6.41786e-05, -0.0886914, 0.996059, -0.92321, 0.260238, -2.49695)
+material_override = SubResource("StandardMaterial3D_64kax")
+mesh = ExtResource("6_k6jfk")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Obstacles/CSGBox3D15/GraveA"]
+transform = Transform3D(1, 0, 0, 0, 0.999906, -0.013683, 0, 0.013683, 0.999906, 0.0453828, 1.06325, 0.0179167)
+visible = false
+use_collision = true
+size = Vector3(1.80164, 2.01819, 0.5625)
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="Obstacles"]
 transform = Transform3D(-0.999867, 0, 0.0162831, 0, 1, 0, -0.0162831, 0, -0.999867, 0.695672, 1.124, -20.0144)
