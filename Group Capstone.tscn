@@ -965,7 +965,6 @@ size = Vector3(1.51984, 2.59845, 0.5625)
 transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 50, -0.224266, 0.659657, -86.8514)
 
 [node name="FloorDirt" type="MeshInstance3D" parent="Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_v2t8c")
 mesh = ExtResource("8_aq67q")
 skeleton = NodePath("../..")
