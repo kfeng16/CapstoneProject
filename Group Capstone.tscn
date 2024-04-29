@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=25 format=3 uid="uid://bevecyuh0vots"]
 
 [ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://Main_character.tscn" id="4_sni3l"]
 [ext_resource type="ArrayMesh" uid="uid://cjdhwhlx1xcx6" path="res://fence_pillar.obj" id="4_t0825"]
@@ -13,6 +13,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c0epwmqpiisok" path="res://obj/floor_dirt.obj" id="11_v5jce"]
 [ext_resource type="ArrayMesh" uid="uid://y6xv1ofq7jk6" path="res://obj/arch_gate.obj" id="12_b3eam"]
 [ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="13_h5u0e"]
+[ext_resource type="Script" path="res://CollisionShape3D.gd" id="14_xxkp3"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_gohxr"]
 
@@ -49,6 +50,10 @@ albedo_texture = ExtResource("4_uer1b")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2t8c"]
 albedo_texture = ExtResource("4_uer1b")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xtjvl"]
+margin = 0.1
+points = PackedVector3Array(0, 2, 0, 2, 0, 0, 2, -2, 0, -2, -2, 0, -2, 0, 0, 0, 2, -0.3, 2, 0, -0.3, 2, -2, -0.3, -2, -2, -0.3, -2, 0, -0.3, 1.4, 1.4, 0, 1.4, 1.4, -0.3, -1.4, 1.4, 0, -1.4, 1.4, -0.3)
 
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500228, -11.2911, 13.4383)
@@ -948,7 +953,6 @@ size = Vector3(1.51984, 2.59845, 0.5625)
 transform = Transform3D(1.2, 0, 0, 0, 1, 0, 0, 0, 50, -0.224266, 0.659657, -86.8514)
 
 [node name="FloorDirt" type="MeshInstance3D" parent="Decoration"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_v2t8c")
 mesh = ExtResource("8_aq67q")
 skeleton = NodePath("../..")
@@ -985,3 +989,31 @@ light_energy = 12.07
 light_indirect_energy = 6.01
 light_size = 0.707
 spot_range = 10.612
+
+[node name="Goal" type="Node3D" parent="."]
+
+[node name="FinishArch" type="MeshInstance3D" parent="Goal"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.152848, 0.652, -36.886)
+mesh = ExtResource("12_b3eam")
+skeleton = NodePath("../..")
+
+[node name="LanternHanging2" type="MeshInstance3D" parent="Goal"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.109876, 4.31, -36.872)
+mesh = ExtResource("13_h5u0e")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Goal/LanternHanging2"]
+transform = Transform3D(1, 0, 0, 0, 0.165099, 0.986277, 0, -0.986277, 0.165099, 0, -0.767871, 0)
+light_color = Color(0.870588, 0.776471, 0.439216, 1)
+light_energy = 12.07
+light_indirect_energy = 6.01
+light_size = 0.707
+spot_range = 10.612
+
+[node name="Area3D" type="Area3D" parent="Goal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80173, -36.1584)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Goal/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123041, 0.786703, -0.642828)
+shape = SubResource("ConvexPolygonShape3D_xtjvl")
+script = ExtResource("14_xxkp3")
