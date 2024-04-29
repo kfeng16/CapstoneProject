@@ -39,3 +39,4 @@ transform = Transform3D(-0.199641, -0.000282113, -0.0119763, -0.000279627, 0.2, 
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("3_muddc")
+autoplay = true
