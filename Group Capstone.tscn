@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=26 format=3 uid="uid://bevecyuh0vots"]
 
 [ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://Main_character.tscn" id="4_sni3l"]
 [ext_resource type="ArrayMesh" uid="uid://cjdhwhlx1xcx6" path="res://fence_pillar.obj" id="4_t0825"]
@@ -13,7 +13,8 @@
 [ext_resource type="ArrayMesh" uid="uid://c0epwmqpiisok" path="res://obj/floor_dirt.obj" id="11_v5jce"]
 [ext_resource type="ArrayMesh" uid="uid://y6xv1ofq7jk6" path="res://obj/arch_gate.obj" id="12_b3eam"]
 [ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="13_h5u0e"]
-[ext_resource type="Texture2D" uid="uid://c1j6xe08wpomx" path="res://gold coin/coin4.png" id="14_qmtsx"]
+[ext_resource type="Script" path="res://CollisionShape3D.gd" id="14_xxkp3"]
+[ext_resource type="Texture2D" path="res://Stones_Texture.png" id="15_atk45"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_gohxr"]
 
@@ -51,6 +52,10 @@ albedo_texture = ExtResource("4_uer1b")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v2t8c"]
 albedo_texture = ExtResource("4_uer1b")
 
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xtjvl"]
+margin = 0.1
+points = PackedVector3Array(0, 2, 0, 2, 0, 0, 2, -2, 0, -2, -2, 0, -2, 0, 0, 0, 2, -0.3, 2, 0, -0.3, 2, -2, -0.3, -2, -2, -0.3, -2, 0, -0.3, 1.4, 1.4, 0, 1.4, 1.4, -0.3, -1.4, 1.4, 0, -1.4, 1.4, -0.3)
+
 [node name="Node3D" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500228, -11.2911, 13.4383)
 
@@ -58,10 +63,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.500228, -11.2911, 13.4383)
 environment = SubResource("Environment_f770j")
 
 [node name="Walls" type="Node3D" parent="."]
-transform = Transform3D(1, -4.80841e-11, 1.3612e-08, 3.70898e-11, 1, 1.9095e-11, -1.25298e-09, 1.00519e-12, 1, -2.98023e-07, 0, -180)
+transform = Transform3D(1, -4.80841e-11, 1.3612e-08, 3.70898e-11, 1, 1.9095e-11, -1.25298e-09, 1.00519e-12, 1, -2.68221e-07, 0, -180)
 
 [node name="Wall Decoration" type="Node3D" parent="Walls"]
-transform = Transform3D(1, 4.80841e-11, -1.3612e-08, -3.70898e-11, 1, -1.9095e-11, 1.25298e-09, -1.00519e-12, 1, -0.062983, -0.0089817, 180.012)
+transform = Transform3D(1, 4.80841e-11, -1.3612e-08, -3.70898e-11, 1, -1.9095e-11, 1.25298e-09, -1.00519e-12, 1, -2.14577e-06, 0, 180)
 
 [node name="Node3D2" type="Node3D" parent="Walls/Wall Decoration"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44276, 0.597702, 6.5826)
@@ -79,7 +84,7 @@ mesh = ExtResource("4_t0825")
 skin = SubResource("Skin_6ppj7")
 
 [node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D2"]
-transform = Transform3D(-0.0557867, 0, -0.998443, 3.75324e-29, 1, 1.42369e-28, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
 mesh = ExtResource("6_14v7n")
 
 [node name="Node3D" type="Node3D" parent="Walls/Wall Decoration"]
@@ -776,25 +781,25 @@ use_collision = true
 size = Vector3(4, 2, 1)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="Obstacles"]
-transform = Transform3D(-0.999867, 0, 0.0162831, 0, 1, 0, -0.0162831, 0, -0.999867, 0.834709, 1.17535, -28.5461)
+transform = Transform3D(-0.999867, 0, 0.0162831, 0, 1, 0, -0.0162831, 0, -0.999867, 0.83623, 1.124, -28.6454)
 use_collision = true
 size = Vector3(4, 0.5, 1)
+
+[node name="GraveA" type="MeshInstance3D" parent="Obstacles/CSGBox3D12"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.354824, 0.652, -4.2819)
+material_override = SubResource("StandardMaterial3D_64kax")
+mesh = ExtResource("6_k6jfk")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Obstacles/CSGBox3D12/GraveA"]
+transform = Transform3D(1, 0, 0, 0, 0.999906, -0.013683, 0, 0.013683, 0.999906, 0.0453828, 1.06325, 0.0179167)
+visible = false
+use_collision = true
+size = Vector3(1.80164, 2.01819, 0.5625)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="Obstacles"]
 transform = Transform3D(-0.999867, 0, 0.0162831, 0, 1, 0, -0.0162831, 0, -0.999867, 2.31149, 1.0506, -25.8147)
 use_collision = true
 size = Vector3(4, 1, 1)
-
-[node name="GraveA" type="MeshInstance3D" parent="Obstacles/CSGBox3D13"]
-transform = Transform3D(1, 0, -9.01594e-10, 0, 1, 0, -3.50698e-10, 0, 1, 3.56422, 0.96632, -3.629)
-material_override = SubResource("StandardMaterial3D_64kax")
-mesh = ExtResource("6_k6jfk")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Obstacles/CSGBox3D13/GraveA"]
-transform = Transform3D(1, 0, 0, 0, 0.999906, -0.013683, 0, 0.013683, 0.999906, 0.0453828, 1.06325, 0.0179167)
-visible = false
-use_collision = true
-size = Vector3(1.80164, 2.01819, 0.5625)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="Obstacles"]
 transform = Transform3D(-0.999867, 0, 0.0162831, 0, 1, 0, -0.0162831, 0, -0.999867, -2.27158, 1.124, -24.1098)
@@ -942,8 +947,6 @@ visible = false
 use_collision = true
 size = Vector3(1.80164, 2.01819, 0.5625)
 
-[node name="Node3D" type="Node3D" parent="Obstacles"]
-
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_sni3l")]
 transform = Transform3D(0.999941, 0.000703898, 0.0108786, -0.000702806, 1, -0.000103814, -0.0108787, 9.61388e-05, 0.999941, -0.393831, 1.52759, 5.55795)
 
@@ -999,7 +1002,38 @@ light_indirect_energy = 6.01
 light_size = 0.707
 spot_range = 10.612
 
-[node name="Coin4" type="Sprite2D" parent="."]
-position = Vector2(81.0001, 569)
-scale = Vector2(7.125, 6.4375)
-texture = ExtResource("14_qmtsx")
+[node name="Goal" type="Node3D" parent="."]
+
+[node name="FinishArch" type="MeshInstance3D" parent="Goal"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.152848, 0.652, -36.886)
+mesh = ExtResource("12_b3eam")
+skeleton = NodePath("../..")
+
+[node name="LanternHanging2" type="MeshInstance3D" parent="Goal"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.109876, 4.31, -36.872)
+mesh = ExtResource("13_h5u0e")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Goal/LanternHanging2"]
+transform = Transform3D(1, 0, 0, 0, 0.165099, 0.986277, 0, -0.986277, 0.165099, 0, -0.767871, 0)
+light_color = Color(0.870588, 0.776471, 0.439216, 1)
+light_energy = 12.07
+light_indirect_energy = 6.01
+light_size = 0.707
+spot_range = 10.612
+
+[node name="Area3D" type="Area3D" parent="Goal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80173, -36.1584)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Goal/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123041, 0.786703, -0.642828)
+shape = SubResource("ConvexPolygonShape3D_xtjvl")
+script = ExtResource("14_xxkp3")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="StonesTexture" type="Sprite2D" parent="."]
+position = Vector2(1500, 530)
+scale = Vector2(0.285156, 0.25293)
+texture = ExtResource("15_atk45")
