@@ -13,7 +13,7 @@
 [ext_resource type="ArrayMesh" uid="uid://c0epwmqpiisok" path="res://obj/floor_dirt.obj" id="11_v5jce"]
 [ext_resource type="ArrayMesh" uid="uid://y6xv1ofq7jk6" path="res://obj/arch_gate.obj" id="12_b3eam"]
 [ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="13_h5u0e"]
-[ext_resource type="Texture2D" uid="uid://b48dchuhi1i7v" path="res://coin4.png" id="14_53w1d"]
+[ext_resource type="Texture2D" uid="uid://c1j6xe08wpomx" path="res://gold coin/coin4.png" id="14_qmtsx"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_gohxr"]
 
@@ -942,6 +942,8 @@ visible = false
 use_collision = true
 size = Vector3(1.80164, 2.01819, 0.5625)
 
+[node name="Node3D" type="Node3D" parent="Obstacles"]
+
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_sni3l")]
 transform = Transform3D(0.999941, 0.000703898, 0.0108786, -0.000702806, 1, -0.000103814, -0.0108787, 9.61388e-05, 0.999941, -0.393831, 1.52759, 5.55795)
 
@@ -997,10 +999,7 @@ light_indirect_energy = 6.01
 light_size = 0.707
 spot_range = 10.612
 
-[node name="TileMap" type="TileMap" parent="."]
-format = 2
-
-[node name="Coin4" type="Sprite2D" parent="TileMap"]
-position = Vector2(512.5, 199)
-scale = Vector2(12.4375, 9)
-texture = ExtResource("14_53w1d")
+[node name="Coin4" type="Sprite2D" parent="."]
+position = Vector2(81.0001, 569)
+scale = Vector2(7.125, 6.4375)
+texture = ExtResource("14_qmtsx")
