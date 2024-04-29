@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=26 format=3 uid="uid://bevecyuh0vots"]
 
 [ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://Main_character.tscn" id="4_sni3l"]
 [ext_resource type="ArrayMesh" uid="uid://cjdhwhlx1xcx6" path="res://fence_pillar.obj" id="4_t0825"]
@@ -14,6 +14,7 @@
 [ext_resource type="ArrayMesh" uid="uid://y6xv1ofq7jk6" path="res://obj/arch_gate.obj" id="12_b3eam"]
 [ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="13_h5u0e"]
 [ext_resource type="Script" path="res://CollisionShape3D.gd" id="14_xxkp3"]
+[ext_resource type="PackedScene" uid="uid://uvygt0fpl323" path="res://barbarian.tscn" id="15_7gewg"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_gohxr"]
 
@@ -991,6 +992,7 @@ light_size = 0.707
 spot_range = 10.612
 
 [node name="Goal" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.457)
 
 [node name="FinishArch" type="MeshInstance3D" parent="Goal"]
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.152848, 0.652, -36.886)
@@ -1017,3 +1019,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.80173, -36.1584)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.123041, 0.786703, -0.642828)
 shape = SubResource("ConvexPolygonShape3D_xtjvl")
 script = ExtResource("14_xxkp3")
+
+[node name="Barbarian" parent="." instance=ExtResource("15_7gewg")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.30396, 0.936367, -41.0771)

@@ -5,26 +5,26 @@
 [node name="Mage" instance=ExtResource("1_26btk")]
 
 [node name="Skeleton3D" parent="Rig" index="0"]
-bones/1/position = Vector3(2.48408e-09, 0.365523, -0.010419)
-bones/2/rotation = Quaternion(-0.0628902, -0.0026619, 0.0449101, 0.997006)
-bones/3/rotation = Quaternion(-0.00157451, 9.07821e-06, 6.86214e-05, 0.999999)
-bones/4/position = Vector3(0.218257, 0.143643, 0.0754792)
-bones/4/rotation = Quaternion(-0.46541, -0.733893, -0.397487, 0.294617)
-bones/5/rotation = Quaternion(-2.05195e-08, -5.79656e-08, -0.343114, 0.939294)
-bones/7/rotation = Quaternion(-0.0205878, -0.79965, -0.297111, 0.521403)
+bones/1/position = Vector3(2.48408e-09, 0.341157, -0.010419)
+bones/2/rotation = Quaternion(-0.062951, -0.000562565, 0.00949128, 0.997971)
+bones/3/rotation = Quaternion(-0.0175246, 0.000101038, 0.000763803, 0.999846)
+bones/4/position = Vector3(0.216536, 0.143644, 0.0755589)
+bones/4/rotation = Quaternion(-0.466998, -0.705441, -0.415655, 0.333913)
+bones/5/rotation = Quaternion(8.35916e-10, -8.06745e-08, -0.422626, 0.906304)
+bones/7/rotation = Quaternion(0.0192106, -0.795523, -0.299057, 0.526629)
 bones/8/rotation = Quaternion(1.60975e-09, 1.60975e-09, -0.707107, 0.707107)
-bones/11/position = Vector3(-0.205762, 0.143643, 0.0755259)
-bones/11/rotation = Quaternion(-0.501141, 0.672212, 0.428799, 0.336334)
-bones/12/rotation = Quaternion(2.14885e-08, 7.48781e-08, 0.500501, 0.865736)
-bones/14/rotation = Quaternion(0.0447289, 0.756517, 0.338723, 0.557628)
-bones/18/rotation = Quaternion(-0.00157588, 0.0314078, 1.92498e-05, 0.999505)
-bones/21/rotation = Quaternion(0.992512, 0.0673377, 0.0289947, 0.0976937)
-bones/22/rotation = Quaternion(0.431579, 6.33677e-08, -2.9883e-07, 0.902075)
-bones/23/rotation = Quaternion(-0.656941, -0.116351, 0.0654819, 0.742026)
+bones/11/position = Vector3(-0.207484, 0.143643, 0.0754661)
+bones/11/rotation = Quaternion(-0.476433, 0.688819, 0.427265, 0.340566)
+bones/12/rotation = Quaternion(1.90873e-09, 3.3018e-08, 0.447039, 0.894515)
+bones/14/rotation = Quaternion(0.0257251, 0.783206, 0.318845, 0.533165)
+bones/18/rotation = Quaternion(-0.0175399, 0.0314379, 0.000214179, 0.999352)
+bones/21/rotation = Quaternion(0.986888, 0.0717536, 0.0313865, 0.141131)
+bones/22/rotation = Quaternion(0.549502, 5.63574e-08, -3.74111e-07, 0.835493)
+bones/23/rotation = Quaternion(-0.72159, -0.108209, 0.0813462, 0.678957)
 bones/24/rotation = Quaternion(-3.04791e-08, 0.920355, -0.391084, 6.94849e-08)
-bones/25/rotation = Quaternion(0.984486, -0.027454, -0.0143676, 0.172704)
-bones/26/rotation = Quaternion(0.468201, -6.04781e-08, 3.24395e-07, 0.883622)
-bones/27/rotation = Quaternion(-0.635131, 0.112815, -0.0216081, 0.763816)
+bones/25/rotation = Quaternion(0.975542, -0.0291761, -0.015543, 0.217315)
+bones/26/rotation = Quaternion(0.578684, -5.86568e-08, 4.01245e-07, 0.815552)
+bones/27/rotation = Quaternion(-0.696895, 0.110005, -0.0333384, 0.707902)
 bones/28/rotation = Quaternion(3.04791e-08, 0.920355, -0.391084, -6.94849e-08)
 bones/29/rotation = Quaternion(0.707107, -2.29302e-07, -4.60552e-08, 0.707107)
 bones/30/position = Vector3(0.202182, 0.0259903, 0.205181)
@@ -37,26 +37,26 @@ bones/37/rotation = Quaternion(-0.707107, -7.05285e-08, -7.05285e-08, 0.707107)
 bones/38/rotation = Quaternion(-5.83589e-09, 6.43837e-10, 0.994809, 0.101756)
 bones/39/rotation = Quaternion(-1.04035e-07, 0.391084, 0.920355, -2.95261e-08)
 bones/43/position = Vector3(0.453507, 0.716049, -0.544579)
-bones/44/position = Vector3(0.487698, 1.34787, 0.243183)
-bones/44/rotation = Quaternion(0.160724, 0.630248, 0.135734, 0.74735)
+bones/44/position = Vector3(0.517091, 1.27703, 0.246994)
+bones/44/rotation = Quaternion(0.168285, 0.618974, 0.13803, 0.754651)
 bones/45/position = Vector3(-0.453507, 0.716049, -0.544579)
-bones/46/position = Vector3(-0.562219, 1.20482, 0.266844)
-bones/46/rotation = Quaternion(-0.166027, 0.60092, 0.129193, -0.771129)
+bones/46/position = Vector3(-0.532826, 1.23911, 0.253915)
+bones/46/rotation = Quaternion(-0.169837, 0.610394, 0.136116, -0.761608)
 
 [node name="Spellbook" parent="Rig/Skeleton3D" index="0"]
-transform = Transform3D(-0.000286352, 0.985659, 0.168744, 0.911483, -0.0691535, 0.405482, 0.411336, 0.153923, -0.898392, 0.508422, 1.59175, 0.0841393)
+transform = Transform3D(-9.35262e-05, 0.980729, 0.19537, 0.905162, -0.0829618, 0.41689, 0.425065, 0.17688, -0.887712, 0.540741, 1.52233, 0.0962077)
 
 [node name="Spellbook_open" parent="Rig/Skeleton3D" index="1"]
-transform = Transform3D(-0.000286352, 0.985659, 0.168744, 0.911483, -0.0691535, 0.405482, 0.411336, 0.153923, -0.898392, 0.488113, 1.54295, 0.192262)
+transform = Transform3D(-9.35262e-05, 0.980729, 0.19537, 0.905162, -0.0829618, 0.41689, 0.425065, 0.17688, -0.887712, 0.517228, 1.47216, 0.203045)
 
 [node name="1H_Wand" parent="Rig/Skeleton3D" index="2"]
-transform = Transform3D(0.000222213, -0.244334, 0.96969, -0.911278, 0.39926, 0.100811, -0.41179, -0.88368, -0.222567, -0.531939, 1.33313, 0.353731)
+transform = Transform3D(-0.00013362, -0.217566, 0.976045, -0.905074, 0.415092, 0.0924025, -0.425252, -0.883381, -0.196968, -0.504897, 1.37098, 0.340274)
 
 [node name="2H_Staff" parent="Rig/Skeleton3D" index="3"]
-transform = Transform3D(0.000222213, -0.244334, 0.96969, -0.911278, 0.39926, 0.100811, -0.41179, -0.88368, -0.222567, -0.531939, 1.33313, 0.353731)
+transform = Transform3D(-0.00013362, -0.217566, 0.976045, -0.905074, 0.415092, 0.0924025, -0.425252, -0.883381, -0.196968, -0.504897, 1.37098, 0.340274)
 
 [node name="Mage_Hat" parent="Rig/Skeleton3D" index="4"]
-transform = Transform3D(0.994685, -0.0995854, 0.0261677, 0.0817282, 0.918181, 0.387639, -0.0626299, -0.38344, 0.92144, -0.105989, 1.72923, -0.163718)
+transform = Transform3D(0.998003, -0.0363402, 0.0516615, 0.00971614, 0.896504, 0.442929, -0.0624109, -0.441542, 0.895067, -0.0243296, 1.70249, -0.206372)
 
 [node name="Mage_Cape" parent="Rig/Skeleton3D" index="5"]
-transform = Transform3D(0.99594, -0.0893182, -0.0112197, 0.0900194, 0.987644, 0.128277, -0.000376413, -0.128766, 0.991675, -0.0551813, 1.16825, -0.0888554)
+transform = Transform3D(0.99979, -0.020311, -0.00280255, 0.0204976, 0.986852, 0.160322, -0.000490608, -0.160346, 0.987061, -0.0120178, 1.14513, -0.0965424)
