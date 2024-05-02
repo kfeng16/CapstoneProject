@@ -1,6 +1,6 @@
 extends Node3D
 
-const SPEED = 10.0
+var SPEED = 10.0
 
 @onready var mesh = $MeshInstance3D
 @onready var ray = $RayCast3D
@@ -13,10 +13,13 @@ func _ready():
 
 func _process(delta):
 	position += transform.basis * Vector3(0,0,-SPEED) * delta
+	ray.force_raycast_update()
 	if ray.is_colliding():
 		if ray.get_collider().has_method("destroy_cell"):
+			SPEED=0
 			mesh.visible = false
 			particle.emitting = true
+			#print(ray.get_collision_point() - ray.get_collision_normal())
 			ray.get_collider().destroy_cell(ray.get_collision_point() - ray.get_collision_normal())
 		await get_tree().create_timer(1.0).timeout
 		queue_free()
