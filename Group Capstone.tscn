@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=24 format=3 uid="uid://bevecyuh0vots"]
 
 [ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://Main_character.tscn" id="4_sni3l"]
 [ext_resource type="ArrayMesh" uid="uid://cjdhwhlx1xcx6" path="res://fence_pillar.obj" id="4_t0825"]
@@ -15,6 +15,7 @@
 [ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="13_h5u0e"]
 [ext_resource type="Script" path="res://CollisionShape3D.gd" id="14_xxkp3"]
 [ext_resource type="PackedScene" uid="uid://uvygt0fpl323" path="res://barbarian.tscn" id="15_7gewg"]
+[ext_resource type="PackedScene" uid="uid://drk4vgn0rny4q" path="res://instructions.tscn" id="16_wlgx8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xff0s"]
 albedo_texture = ExtResource("4_uer1b")
@@ -1007,3 +1008,5 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, -2.30396, 0.936367, -41
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("4_sni3l")]
 transform = Transform3D(0.999941, 0.000703898, 0.0108786, -0.000702806, 1, -0.000103814, -0.0108787, 9.61388e-05, 0.999941, -0.207976, 1.66955, 4.8802)
+
+[node name="Instructions" parent="." instance=ExtResource("16_wlgx8")]
