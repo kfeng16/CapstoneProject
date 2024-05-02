@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://uvygt0fpl323"]
+[gd_scene load_steps=4 format=3 uid="uid://uvygt0fpl323"]
 
 [ext_resource type="PackedScene" uid="uid://bqs3bcc81wi08" path="res://charachters/Barbarian.glb" id="1_0l13g"]
+[ext_resource type="Script" path="res://scenes/barbarian.gd" id="1_smiph"]
 
-[node name="Node3D" type="CharacterBody3D"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r0l65"]
+
+[node name="Node3D" type="CharacterBody3D" groups=["enemies"]]
+script = ExtResource("1_smiph")
 
 [node name="Barbarian" parent="." instance=ExtResource("1_0l13g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.105742, 1.19209e-07, -0.147151)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.2, -2.82142e-10, 1.39698e-09, 2.82142e-10, 1.2, 3.27418e-11, -1.39698e-09, -3.27418e-11, 1.2, -0.0922503, 1.11882, -0.0874311)
+shape = SubResource("CapsuleShape3D_r0l65")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]

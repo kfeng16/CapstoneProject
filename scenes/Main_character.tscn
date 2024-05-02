@@ -18,7 +18,7 @@ transform = Transform3D(0.999941, 0.000703898, 0.0108786, -0.000702806, 1, -0.00
 script = ExtResource("1_ak8v1")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.2, 9.95267e-11, 1.11398e-10, 4.41558e-11, 0.2, -2.1008e-11, -2.88436e-10, -9.7375e-13, 0.2, 0.0105998, -0.384527, -0.937208)
+transform = Transform3D(0.2, 1.27898e-10, 4.65661e-10, 4.70237e-11, 0.2, -2.91038e-11, -2.32831e-10, -5.45697e-12, 0.2, 0.098337, -0.384465, -0.936253)
 shape = SubResource("CapsuleShape3D_bxqbt")
 
 [node name="CSGMesh3D" type="CSGMesh3D" parent="."]
