@@ -20,7 +20,7 @@ anchor_top = 0.404321
 anchor_right = 0.885417
 anchor_bottom = 0.804012
 offset_right = -2.28882e-05
-text = "Use the arrows to move and \"c\" to cast spells!
+text = "Use the arrows to move, space to jump, and \"c\" to cast spells!
 
 Enjoy..."
 label_settings = SubResource("LabelSettings_eu3c3")
