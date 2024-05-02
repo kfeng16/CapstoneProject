@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bvak5l6ooi8ki"]
 
 [ext_resource type="Script" path="res://scripts/CharacterBody3D.gd" id="1_ak8v1"]
-[ext_resource type="PackedScene" uid="uid://da8j4klmtk28u" path="res://Mage.glb" id="2_6krvy"]
+[ext_resource type="PackedScene" uid="uid://da8j4klmtk28u" path="res://charachters/Mage.glb" id="2_6krvy"]
 [ext_resource type="AudioStream" uid="uid://80iqcrl4pehc" path="res://music/Potter Puppet Pals_ The Mysterious Ticking Noise.mp3" id="3_muddc"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bxqbt"]
