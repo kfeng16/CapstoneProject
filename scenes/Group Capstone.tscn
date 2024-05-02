@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=22 format=3 uid="uid://bevecyuh0vots"]
 
 [ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://scenes/Main_character.tscn" id="4_sni3l"]
 [ext_resource type="Texture2D" uid="uid://byjjnsm23s75k" path="res://obj/halloweenbits_texture.png" id="4_uer1b"]
@@ -6,7 +6,6 @@
 [ext_resource type="ArrayMesh" uid="uid://c3jy8m6ks18e0" path="res://obj/path_A.obj" id="9_vh813"]
 [ext_resource type="ArrayMesh" uid="uid://c03qcge5ylg64" path="res://obj/path_B.obj" id="10_e5a1a"]
 [ext_resource type="Script" path="res://scripts/Destructables.gd" id="10_iwf3t"]
-[ext_resource type="Script" path="res://scenes/VBoxContainer.gd" id="11_lmsik"]
 [ext_resource type="ArrayMesh" uid="uid://c0epwmqpiisok" path="res://obj/floor_dirt.obj" id="11_v5jce"]
 [ext_resource type="ArrayMesh" uid="uid://y6xv1ofq7jk6" path="res://obj/arch_gate.obj" id="12_b3eam"]
 [ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="13_h5u0e"]
@@ -864,7 +863,6 @@ script = ExtResource("10_iwf3t")
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_right = 1142.0
 offset_bottom = 642.0
-script = ExtResource("11_lmsik")
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 layout_mode = 2
