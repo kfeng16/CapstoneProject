@@ -1,0 +1,460 @@
+[gd_scene load_steps=76 format=3 uid="uid://dreio5aakwfxb"]
+
+[ext_resource type="ArrayMesh" uid="uid://b3pr145d132lt" path="res://obj/arch.obj" id="1_qgqa6"]
+[ext_resource type="ArrayMesh" uid="uid://y6xv1ofq7jk6" path="res://obj/arch_gate.obj" id="2_o5ix4"]
+[ext_resource type="ArrayMesh" uid="uid://dr1g566mpnsl2" path="res://obj/arch_gate_left.obj" id="3_ib6r3"]
+[ext_resource type="ArrayMesh" uid="uid://b4jx3pddy23r8" path="res://obj/arch_gate_right.obj" id="4_tjh1g"]
+[ext_resource type="ArrayMesh" uid="uid://cvvexvy7vvs6" path="res://obj/bench.obj" id="5_wticd"]
+[ext_resource type="ArrayMesh" uid="uid://bkxwm7iarjqqo" path="res://obj/bench_decorated.obj" id="6_7r22f"]
+[ext_resource type="ArrayMesh" uid="uid://ckfs4wegrckbu" path="res://obj/bone_A.obj" id="7_dcdr1"]
+[ext_resource type="ArrayMesh" uid="uid://gsqje3he7g3w" path="res://obj/bone_B.obj" id="8_j7md2"]
+[ext_resource type="ArrayMesh" uid="uid://df2yqx7na7whv" path="res://obj/bone_C.obj" id="9_tuq7o"]
+[ext_resource type="ArrayMesh" uid="uid://cia0jes8no128" path="res://obj/candle.obj" id="10_wvoop"]
+[ext_resource type="ArrayMesh" uid="uid://sopssog86eb4" path="res://obj/candle_melted.obj" id="11_ffsqk"]
+[ext_resource type="ArrayMesh" uid="uid://5dmf7mn3ssvt" path="res://obj/candle_thin.obj" id="12_uluua"]
+[ext_resource type="ArrayMesh" uid="uid://wnp8jxkxu8l4" path="res://obj/candle_triple.obj" id="13_jc74l"]
+[ext_resource type="ArrayMesh" uid="uid://dblnfmilnqraq" path="res://obj/coffin.obj" id="14_uvqhg"]
+[ext_resource type="ArrayMesh" uid="uid://ca7uxo5t23sk6" path="res://obj/coffin_decorated.obj" id="15_njjgu"]
+[ext_resource type="ArrayMesh" uid="uid://dkvxr0x5qrt1j" path="res://obj/coffin_lid.obj" id="16_to2rh"]
+[ext_resource type="ArrayMesh" uid="uid://b02uo6s37cw5m" path="res://obj/crypt.obj" id="17_5072e"]
+[ext_resource type="ArrayMesh" uid="uid://bi7gb37shn56h" path="res://obj/fence.obj" id="18_fys5l"]
+[ext_resource type="ArrayMesh" uid="uid://c7e2xa2ohnaiu" path="res://obj/fence_broken.obj" id="19_0tlbt"]
+[ext_resource type="ArrayMesh" uid="uid://qlikrfwe27d1" path="res://obj/fence_gate.obj" id="20_c75u3"]
+[ext_resource type="ArrayMesh" uid="uid://qmqrpnc7h71c" path="res://obj/fence_gate_left.obj" id="21_rqd77"]
+[ext_resource type="ArrayMesh" uid="uid://cfcgsakys6m1i" path="res://obj/fence_gate_right.obj" id="22_we2h0"]
+[ext_resource type="ArrayMesh" uid="uid://dttf1d65wl7d" path="res://obj/fence_pillar.obj" id="23_23iqh"]
+[ext_resource type="ArrayMesh" uid="uid://br25utvwywyoc" path="res://obj/fence_pillar_broken.obj" id="24_4ja1e"]
+[ext_resource type="ArrayMesh" uid="uid://cpstns1gs43vo" path="res://obj/fence_seperate.obj" id="25_06ib5"]
+[ext_resource type="ArrayMesh" uid="uid://c2votso6leekj" path="res://obj/fence_seperate_broken.obj" id="26_pcgxs"]
+[ext_resource type="ArrayMesh" uid="uid://c0epwmqpiisok" path="res://obj/floor_dirt.obj" id="27_o1ugl"]
+[ext_resource type="ArrayMesh" uid="uid://si53ku2i1fjq" path="res://obj/floor_dirt_grave.obj" id="28_3timg"]
+[ext_resource type="ArrayMesh" uid="uid://cf0bi1s8w1jkn" path="res://obj/floor_dirt_small.obj" id="29_bkk73"]
+[ext_resource type="ArrayMesh" uid="uid://bqet6gew1lnkt" path="res://obj/gravemarker_A.obj" id="30_gavt5"]
+[ext_resource type="ArrayMesh" uid="uid://71d7528lg1wi" path="res://obj/gravemarker_B.obj" id="31_uqhuq"]
+[ext_resource type="ArrayMesh" uid="uid://6wxb2t3nkcjn" path="res://obj/gravestone.obj" id="32_0d6vk"]
+[ext_resource type="ArrayMesh" uid="uid://dkkqpj7gq1644" path="res://obj/grave_A.obj" id="33_18de2"]
+[ext_resource type="ArrayMesh" uid="uid://btri6ehoxfi1g" path="res://obj/grave_A_destroyed.obj" id="34_237wa"]
+[ext_resource type="ArrayMesh" uid="uid://dwppwlmisomco" path="res://obj/grave_B.obj" id="35_blcp8"]
+[ext_resource type="ArrayMesh" uid="uid://b27f2c76ae0k0" path="res://obj/lantern_hanging.obj" id="36_rvblk"]
+[ext_resource type="ArrayMesh" uid="uid://jtu81yjuhgev" path="res://obj/lantern_standing.obj" id="37_67i7a"]
+[ext_resource type="ArrayMesh" uid="uid://c3jy8m6ks18e0" path="res://obj/path_A.obj" id="38_5xu13"]
+[ext_resource type="ArrayMesh" uid="uid://c03qcge5ylg64" path="res://obj/path_B.obj" id="39_c8btu"]
+[ext_resource type="ArrayMesh" uid="uid://c85xqm1ioi016" path="res://obj/path_C.obj" id="40_ymiqq"]
+[ext_resource type="ArrayMesh" uid="uid://bp4o4iux10p4c" path="res://obj/path_D.obj" id="41_417dt"]
+[ext_resource type="ArrayMesh" uid="uid://n7bo66syukdn" path="res://obj/pillar.obj" id="42_mh2yr"]
+[ext_resource type="ArrayMesh" uid="uid://bis2e4tawj1d7" path="res://obj/plaque.obj" id="43_jkwo3"]
+[ext_resource type="ArrayMesh" uid="uid://ckt0ncuy5wj71" path="res://obj/plaque_candles.obj" id="44_oca7o"]
+[ext_resource type="ArrayMesh" uid="uid://0440kvo7qq77" path="res://obj/post.obj" id="45_sans3"]
+[ext_resource type="ArrayMesh" uid="uid://bbd3tndjdnd1r" path="res://obj/post_lantern.obj" id="46_iqbg1"]
+[ext_resource type="ArrayMesh" uid="uid://dal22fmgov0dg" path="res://obj/post_lantern_lantern.obj" id="47_flqc7"]
+[ext_resource type="ArrayMesh" uid="uid://dmykry4yir772" path="res://obj/post_skull.obj" id="48_3x88l"]
+[ext_resource type="ArrayMesh" uid="uid://ucfct72x1vni" path="res://obj/post_skull_skull.obj" id="49_f1qx5"]
+[ext_resource type="ArrayMesh" uid="uid://dcj7ypndunpxx" path="res://obj/pumpkin_orange.obj" id="50_ba0sd"]
+[ext_resource type="ArrayMesh" uid="uid://rvroqek4i4jm" path="res://obj/pumpkin_orange_jackolantern.obj" id="51_1y20h"]
+[ext_resource type="ArrayMesh" uid="uid://bhb5wa2ly8lpv" path="res://obj/pumpkin_orange_small.obj" id="52_8jlxf"]
+[ext_resource type="ArrayMesh" uid="uid://j7ru8cictlh0" path="res://obj/pumpkin_yellow.obj" id="53_x7n3v"]
+[ext_resource type="ArrayMesh" uid="uid://i1snclxbx6e" path="res://obj/pumpkin_yellow_jackolantern.obj" id="54_5xhwg"]
+[ext_resource type="ArrayMesh" uid="uid://4es3vnek1us4" path="res://obj/pumpkin_yellow_small.obj" id="55_76gcn"]
+[ext_resource type="ArrayMesh" uid="uid://csboc23qjig2a" path="res://obj/ribcage.obj" id="56_464vt"]
+[ext_resource type="ArrayMesh" uid="uid://dayn7nqbnh83t" path="res://obj/shrine.obj" id="57_e15pf"]
+[ext_resource type="ArrayMesh" uid="uid://cwuwvytiiw4uf" path="res://obj/shrine_candles.obj" id="58_v4y2f"]
+[ext_resource type="ArrayMesh" uid="uid://dik784gq15l00" path="res://obj/skull.obj" id="59_j2pov"]
+[ext_resource type="ArrayMesh" uid="uid://bvdccc17wx7md" path="res://obj/skull_candle.obj" id="60_iri4n"]
+[ext_resource type="ArrayMesh" uid="uid://dd8olh51toqj5" path="res://obj/tree_dead_large.obj" id="61_0luwg"]
+[ext_resource type="ArrayMesh" uid="uid://b4x4bqxksr5es" path="res://obj/tree_dead_large_decorated.obj" id="62_nst2v"]
+[ext_resource type="ArrayMesh" uid="uid://dbxr4ftea2kvx" path="res://obj/tree_dead_medium.obj" id="63_rpdjg"]
+[ext_resource type="ArrayMesh" uid="uid://xpfvjxva2561" path="res://obj/tree_dead_small.obj" id="64_rwl0j"]
+[ext_resource type="ArrayMesh" uid="uid://cyrexfm1r6a3b" path="res://obj/tree_pine_orange_large.obj" id="65_h0do6"]
+[ext_resource type="ArrayMesh" uid="uid://ckag7o5163wbg" path="res://obj/tree_pine_orange_medium.obj" id="66_p6x5b"]
+[ext_resource type="ArrayMesh" uid="uid://c4nrgnusp3h71" path="res://obj/tree_pine_orange_small.obj" id="67_vpsr3"]
+[ext_resource type="ArrayMesh" uid="uid://bassrw25ux6ib" path="res://obj/tree_pine_yellow_large.obj" id="68_fpcux"]
+[ext_resource type="ArrayMesh" uid="uid://co0kbsbqbuwl3" path="res://obj/tree_pine_yellow_medium.obj" id="69_668o7"]
+[ext_resource type="ArrayMesh" uid="uid://dpk8q5p78dwyc" path="res://obj/tree_pine_yellow_small.obj" id="70_2hyew"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_fpep5"]
+points = PackedVector3Array(0, 0.354444, -0.0261739, 0, 0.354444, 0.0261573, 0, 0.399961, -0.0523313, 0.10462, 0, -0.0261739, 0, 0.399961, 0.0523147, 0.10462, 0, 0.0261573, 0.149883, 0, -0.0523313, 0, 2.29992, -0.0523313, 0.149883, 2.79973, -0.084779, 0.149883, 0, 0.0523147, 0.149883, 2.79973, 0.084779, 0, 2.29992, 0.0523147, 1.34988, 2.29992, -0.084779, 1.34988, 0, -0.0523313, 0, 2.34514, -0.0261739, 0.0764291, 2.79973, -0.0424061, 0.149883, 3, -7.45058e-09, 0.549883, 2.69988, -0.084779, 1.34988, 0, 0.0523147, 1.34988, 2.29992, 0.084779, 0.549883, 2.69988, 0.084779, 0.0764291, 2.79973, 0.0423895, 0, 2.34514, 0.0261573, 1.34988, 2.4999, -7.45058e-09, 1.42334, 2.29992, -0.0424061, 1.6, 1.39986, -0.0523313, 1.6, 0.399961, -0.0523313, 1.3953, 0, -0.0261739, 0.549883, 2.89986, -7.45058e-09, 1.3953, 0, 0.0261573, 1.6, 0.399961, 0.0523147, 1.42334, 2.29992, 0.0423895, 1.6, 1.39986, 0.0523147, 1.6, 1.44509, -0.0261739, 1.6, 0.354444, -0.0261739, 1.6, 0.354444, 0.0261573, 1.6, 1.44509, 0.0261573)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_dwntp"]
+points = PackedVector3Array(-0.7, 1e-06, -0.150039, -0.650117, 0.0499618, -0.2, 0.699863, 1e-06, -0.150039, -0.7, 1e-06, 0.15, -0.7, 1.09992, -0.150039, 0.64998, 0.0499618, -0.2, -0.650117, 1.09334, -0.2, 0.699863, 1e-06, 0.15, 0.699863, 1.09992, -0.150039, -0.650117, 0.0499618, 0.2, -0.7, 1.09992, 0.15, -0.633124, 1.34988, -0.150039, 0.64998, 1.09334, -0.2, -0.588312, 1.32404, -0.2, 0.64998, 0.0499618, 0.2, 0.699863, 1.09992, 0.15, 0.632988, 1.34988, -0.150039, -0.650117, 1.09334, 0.2, -0.633124, 1.34988, 0.15, -0.450039, 1.53297, -0.150039, 0.588175, 1.32404, -0.2, -0.424139, 1.48818, -0.2, 0.64998, 1.09334, 0.2, 0.632988, 1.34988, 0.15, 0.449902, 1.53297, -0.150039, -0.588312, 1.32404, 0.2, -0.450039, 1.53297, 0.15, -0.200078, 1.6, -0.150039, 0.424002, 1.48818, -0.2, -0.1935, 1.54988, -0.2, 0.588175, 1.32404, 0.2, 0.449902, 1.53297, 0.15, 0.199941, 1.6, -0.150039, -0.424139, 1.48818, 0.2, -0.200078, 1.6, 0.15, 0.193363, 1.54988, -0.2, 0.424002, 1.48818, 0.2, 0.199941, 1.6, 0.15, -0.1935, 1.54988, 0.2, 0.193363, 1.54988, 0.2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_lqbmw"]
+points = PackedVector3Array(-1, 0, -0.5, -1, 0, 0.5, -1, 0.14984, -0.5, 1, 0, -0.5, 1, 0, 0.5, -1, 0.14984, 0.5, 1, 0.14984, -0.5, -0.633124, 1.62886, -0.150059, -0.584965, 1.62698, -0.200078, -0.422279, 1.9523, -0.200078, -0.193031, 2.07546, -0.200078, 1, 0.14984, 0.5, -0.193031, 2.07546, 0.19998, -0.422279, 1.9523, 0.19998, -0.584965, 1.62698, 0.19998, -0.633124, 1.62886, 0.149961, 0.192835, 2.07546, -0.200078, 0.422083, 1.9523, -0.200078, 0.584769, 1.62698, -0.200078, 0.632929, 1.62886, -0.150059, -0.450078, 1.99502, -0.150059, -0.200078, 2.12902, -0.150059, 0.632929, 1.62886, 0.149961, 0.584769, 1.62698, 0.19998, 0.422083, 1.9523, 0.19998, 0.192835, 2.07546, 0.19998, -0.200078, 2.12902, 0.149961, -0.450078, 1.99502, 0.149961, 0.199883, 2.12902, -0.150059, 0.449883, 1.99502, -0.150059, 0.449883, 1.99502, 0.149961, 0.199883, 2.12902, 0.149961)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2fi4a"]
+points = PackedVector3Array(-1, 0, -0.500107, 0.999925, 0, -0.500107, -1, 0, 0.5, -1, 0.149877, -0.500107, 0.248962, 1.95892, -0.631218, 0.450072, 1.97624, -0.635107, 0.999925, 0, 0.5, 0.813455, 1.84965, -0.606107, 0.987724, 1.66143, -0.562885, 1.02819, 1.70246, -0.520996, 1.0774, 1.30663, -0.430108, -1, 0.149877, 0.5, -0.196167, 1.78142, -0.231331, -0.196167, 1.71421, -0.523774, -0.150617, 1.68782, -0.568996, -0.00888336, 1.83481, -0.602663, 0.234321, 2.01829, -0.593552, 0.46146, 2.03891, -0.598218, 1.0774, 1.37363, -0.137775, 0.999925, 0.149877, 0.5, 0.83806, 1.90758, -0.568107, 1.02819, 1.74719, -0.326664, 1.0412, 1.66535, -0.204664, 0.450072, 2.06571, -0.245331, 0.248962, 2.0486, -0.241331, -0.00888336, 1.92428, -0.212775, -0.150617, 1.77729, -0.179109, -0.0231177, 1.96077, -0.272442, -0.0231177, 1.89357, -0.564885, 0.234321, 2.0855, -0.301108, 0.46146, 2.10612, -0.305886, 1.00074, 1.64659, -0.149109, 0.920212, 1.82368, -0.189775, 0.813455, 1.93913, -0.21622, 0.83806, 1.97459, -0.275664, 0.960678, 1.84244, -0.245331)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_02v3c"]
+points = PackedVector3Array(-1, 0, -0.5, -1, 0, 0.5, -1, 0.149883, -0.5, 1, 0, -0.5, 1, 0, 0.5, -1, 0.149883, 0.5, 1, 0.149883, -0.5, -0.671104, 1.49926, -0.150059, -0.528387, 1.81819, -0.150059, -0.475137, 1.79493, -0.200078, 0, 2.1382, -0.200078, 1, 0.149883, 0.5, 0, 2.1382, 0.19998, -0.475137, 1.79493, 0.19998, -0.528387, 1.81819, 0.149961, -0.671104, 1.49926, 0.149961, 0.639193, 1.67627, -0.200078, 0.691856, 1.69996, -0.150059, 0, 2.2, -0.150059, 0.691856, 1.69996, 0.149961, 0.639193, 1.67627, 0.19998, 0, 2.2, 0.149961)
+
+[node name="Meshes" type="Node3D"]
+
+[node name="Arch" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("1_qgqa6")
+
+[node name="ArchGate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("2_o5ix4")
+
+[node name="ArchGateLeft" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("3_ib6r3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ArchGateLeft"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ArchGateLeft/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_fpep5")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("4_tjh1g")
+
+[node name="Bench" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("5_wticd")
+
+[node name="BenchDecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("6_7r22f")
+
+[node name="BoneA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("7_dcdr1")
+
+[node name="BoneB" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("8_j7md2")
+
+[node name="BoneC" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("9_tuq7o")
+
+[node name="Candle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("10_wvoop")
+
+[node name="CandleMelted" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("11_ffsqk")
+
+[node name="CandleThin" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("12_uluua")
+
+[node name="CandleTriple" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("13_jc74l")
+
+[node name="Coffin" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("14_uvqhg")
+
+[node name="CoffinDecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("15_njjgu")
+
+[node name="CoffinLid" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("16_to2rh")
+
+[node name="Crypt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("17_5072e")
+
+[node name="Fence" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("18_fys5l")
+
+[node name="FenceBroken" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("19_0tlbt")
+
+[node name="FenceGate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("20_c75u3")
+
+[node name="FenceGateLeft" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("21_rqd77")
+
+[node name="FenceGateRight" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("22_we2h0")
+
+[node name="FencePillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("23_23iqh")
+
+[node name="FencePillarBroken" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("24_4ja1e")
+
+[node name="FenceSeperate" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("25_06ib5")
+
+[node name="FenceSeperateBroken" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("26_pcgxs")
+
+[node name="FloorDirt" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("27_o1ugl")
+
+[node name="FloorDirtGrave" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("28_3timg")
+
+[node name="FloorDirtSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("29_bkk73")
+
+[node name="GravemarkerA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("30_gavt5")
+
+[node name="GravemarkerB" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("31_uqhuq")
+
+[node name="Gravestone" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+mesh = ExtResource("32_0d6vk")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Gravestone"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Gravestone/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_dwntp")
+
+[node name="GraveA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+mesh = ExtResource("33_18de2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GraveA"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GraveA/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_lqbmw")
+
+[node name="GraveADestroyed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+mesh = ExtResource("34_237wa")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GraveADestroyed"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GraveADestroyed/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_2fi4a")
+
+[node name="GraveB" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+mesh = ExtResource("35_blcp8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="GraveB"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="GraveB/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_02v3c")
+
+[node name="LanternHanging" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("36_rvblk")
+
+[node name="LanternStanding" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("37_67i7a")
+
+[node name="PathA" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("38_5xu13")
+
+[node name="PathB" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("39_c8btu")
+
+[node name="PathC" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("40_ymiqq")
+
+[node name="PathD" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("41_417dt")
+
+[node name="Pillar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("42_mh2yr")
+
+[node name="Plaque" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("43_jkwo3")
+
+[node name="PlaqueCandles" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("44_oca7o")
+
+[node name="Post" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("45_sans3")
+
+[node name="PostLantern" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("46_iqbg1")
+
+[node name="PostLanternLantern" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("47_flqc7")
+
+[node name="PostSkull" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("48_3x88l")
+
+[node name="PostSkullSkull" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("49_f1qx5")
+
+[node name="PumpkinOrange" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("50_ba0sd")
+
+[node name="PumpkinOrangeJackolantern" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("51_1y20h")
+
+[node name="PumpkinOrangeSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("52_8jlxf")
+
+[node name="PumpkinYellow" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("53_x7n3v")
+
+[node name="PumpkinYellowJackolantern" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("54_5xhwg")
+
+[node name="PumpkinYellowSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("55_76gcn")
+
+[node name="Ribcage" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("56_464vt")
+
+[node name="Shrine" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("57_e15pf")
+
+[node name="ShrineCandles" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("58_v4y2f")
+
+[node name="Skull" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("59_j2pov")
+
+[node name="SkullCandle" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("60_iri4n")
+
+[node name="TreeDeadLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("61_0luwg")
+
+[node name="TreeDeadLargeDecorated" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("62_nst2v")
+
+[node name="TreeDeadMedium" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("63_rpdjg")
+
+[node name="TreeDeadSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("64_rwl0j")
+
+[node name="TreePineOrangeLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("65_h0do6")
+
+[node name="TreePineOrangeMedium" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("66_p6x5b")
+
+[node name="TreePineOrangeSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("67_vpsr3")
+
+[node name="TreePineYellowLarge" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("68_fpcux")
+
+[node name="TreePineYellowMedium" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("69_668o7")
+
+[node name="TreePineYellowSmall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.556264, 0, -0.994972)
+visible = false
+mesh = ExtResource("70_2hyew")

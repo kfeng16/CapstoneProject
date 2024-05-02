@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://df2yqx7na7whv"
+path="res://.godot/imported/bone_C.obj-a76c6fdb72959629686a390018a3dca8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/bone_C.obj-a76c6fdb72959629686a390018a3dca8.mesh"]
+
+source_file="res://obj/bone_C.obj"
+dest_files=["res://.godot/imported/bone_C.obj-a76c6fdb72959629686a390018a3dca8.mesh", "res://.godot/imported/bone_C.obj-a76c6fdb72959629686a390018a3dca8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

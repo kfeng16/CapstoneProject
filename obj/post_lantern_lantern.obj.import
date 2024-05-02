@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dal22fmgov0dg"
+path="res://.godot/imported/post_lantern_lantern.obj-c1cf26fe15d00e0d033c1dcc95822b31.mesh"
+
+[deps]
+
+files=["res://.godot/imported/post_lantern_lantern.obj-c1cf26fe15d00e0d033c1dcc95822b31.mesh"]
+
+source_file="res://obj/post_lantern_lantern.obj"
+dest_files=["res://.godot/imported/post_lantern_lantern.obj-c1cf26fe15d00e0d033c1dcc95822b31.mesh", "res://.godot/imported/post_lantern_lantern.obj-c1cf26fe15d00e0d033c1dcc95822b31.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

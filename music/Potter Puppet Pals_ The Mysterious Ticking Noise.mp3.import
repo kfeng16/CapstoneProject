@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://80iqcrl4pehc"
+path="res://.godot/imported/Potter Puppet Pals_ The Mysterious Ticking Noise.mp3-85ff9e99562fda43ec393c58d54b9d4f.mp3str"
+
+[deps]
+
+source_file="res://music/Potter Puppet Pals_ The Mysterious Ticking Noise.mp3"
+dest_files=["res://.godot/imported/Potter Puppet Pals_ The Mysterious Ticking Noise.mp3-85ff9e99562fda43ec393c58d54b9d4f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
