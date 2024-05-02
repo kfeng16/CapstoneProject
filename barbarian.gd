@@ -8,6 +8,6 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta):
 	# Add the gravity.
-	$AnimationPlayer.play("Idle")
+	$Barbarian/AnimationPlayer.play("idle")
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
