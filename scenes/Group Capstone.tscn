@@ -859,3 +859,13 @@ data = {
 "cells": PackedInt32Array(0, 65535, 32, -65536, 0, 32, 0, 65534, 33, 0, 65533, 33, 65535, 0, 33, 65535, 65533, 33, 65535, 65534, 33, 65535, 65532, 33, 65535, 65531, 33, 65535, 65530, 33, 0, 65531, 33, 0, 65530, 33, 65535, 65525, 33, 0, 65525, 33, 65535, 65523, 33, 0, 65524, 34, 65535, 65524, 34, 65535, 65521, 34, 65535, 65520, 34, 0, 65520, 34, 0, 65521, 34, 65535, 65522, 34)
 }
 script = ExtResource("10_iwf3t")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1142.0
+offset_bottom = 642.0
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "PRESS C TO Shoot
+Use Arrow key to move
+"
