@@ -15,6 +15,11 @@ func _process(delta):
 	position += transform.basis * Vector3(0,0,-SPEED) * delta
 	ray.force_raycast_update()
 	if ray.is_colliding():
+		if ray.get_collider().is_in_group("enemies"):
+			SPEED=0
+			mesh.visible = false
+			particle.emitting = true
+			#ray.get_collider().kill(ray.get_collision_point())
 		if ray.get_collider().has_method("destroy_cell"):
 			SPEED=0
 			mesh.visible = false
