@@ -1,7 +1,9 @@
-[gd_scene load_steps=23 format=3 uid="uid://bevecyuh0vots"]
+[gd_scene load_steps=25 format=3 uid="uid://bevecyuh0vots"]
 
 [ext_resource type="PackedScene" uid="uid://bvak5l6ooi8ki" path="res://scenes/Main_character.tscn" id="4_sni3l"]
 [ext_resource type="Texture2D" uid="uid://byjjnsm23s75k" path="res://obj/halloweenbits_texture.png" id="4_uer1b"]
+[ext_resource type="Script" path="res://scenes/FinishArch.gd" id="8_0ncga"]
+[ext_resource type="Script" path="res://scenes/VBoxContainer2.gd" id="9_btbde"]
 [ext_resource type="MeshLibrary" uid="uid://b82t5fpwl4hme" path="res://Meshes/objects-w-collision.tres" id="9_f2tvp"]
 [ext_resource type="ArrayMesh" uid="uid://c3jy8m6ks18e0" path="res://obj/path_A.obj" id="9_vh813"]
 [ext_resource type="ArrayMesh" uid="uid://c03qcge5ylg64" path="res://obj/path_B.obj" id="10_e5a1a"]
@@ -832,6 +834,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -29.457)
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.152848, 0.652, -36.886)
 mesh = ExtResource("12_b3eam")
 skeleton = NodePath("../..")
+script = ExtResource("8_0ncga")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Goal/FinishArch"]
+offset_right = 66.0
+offset_bottom = 40.0
+script = ExtResource("9_btbde")
+
+[node name="Label" type="Label" parent="Goal/FinishArch/VBoxContainer2"]
+layout_mode = 2
+text = "You win!"
 
 [node name="LanternHanging2" type="MeshInstance3D" parent="Goal"]
 transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 1, -0.109876, 4.31, -36.872)
