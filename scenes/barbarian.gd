@@ -2,6 +2,8 @@ extends CharacterBody3D
 
 @onready var nav_agent = $NavigationAgent3D
 
+
+var playerHealth = 5
 var SPEED = 3
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -14,9 +16,16 @@ func _physics_process(delta):
 	velocity = new_velocity
 	move_and_slide()
 
+func kill(collision_point):
+	$"."/Barbarian/AnimationPlayer.play("Death_A")
+	await get_tree().create_timer(2.0).timeout
+	queue_free()
+	
 func update_target_location(target_location):
 	nav_agent.set_target_position(target_location)
-	print(target_location, position)
-	if(position - target_location <= Vector3(0.3,1,0.3)):
+	if global_transform.origin.distance_to(target_location) <= 1:
 		$"."/Barbarian/AnimationPlayer.play("2H_Melee_Attack_Spinning")
+		playerHealth -= 1
+		if playerHealth <= 0:
+			get_tree().change_scene_to_file("res://scenes/Reload Screen.tscn")
 	

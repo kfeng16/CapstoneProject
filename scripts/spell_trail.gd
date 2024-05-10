@@ -19,7 +19,7 @@ func _process(delta):
 			SPEED=0
 			mesh.visible = false
 			particle.emitting = true
-			#ray.get_collider().kill(ray.get_collision_point())
+			ray.get_collider().kill(ray.get_collision_point())
 		if ray.get_collider().has_method("destroy_cell"):
 			SPEED=0
 			mesh.visible = false

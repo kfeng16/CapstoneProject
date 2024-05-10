@@ -104,7 +104,7 @@ blend_shape_mode = 0
 size = Vector3(2.86255, 3.37451, 1)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_m63qj"]
-vertices = PackedVector3Array(-2, -1, -3, -2, -1, 4, 2, -1, 4, 2, -1, -3)
+vertices = PackedVector3Array(-2, -1, -77.0198, -2, -1, 3.98022, 2, -1, 3.98022, 2, -1, -77.0198)
 polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [node name="Node3D" type="Node3D"]
@@ -766,8 +766,140 @@ mesh = SubResource("ArrayMesh_uo0ad")
 skin = SubResource("Skin_6ppj7")
 skeleton = NodePath("../..")
 
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
+[node name="FencePillar" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar/FencePillar"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0333333, 0.0259848, -1.99056)
+material_override = SubResource("StandardMaterial3D_xff0s")
+mesh = SubResource("ArrayMesh_uo0ad")
+skin = SubResource("Skin_6ppj7")
+skeleton = NodePath("../..")
+
 [node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
 transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -0.233318)
+mesh = SubResource("ArrayMesh_d18mo")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32/ArchGateRight"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 6.46235e-27, 1, -2.01948e-28, 0.998443, -4.03897e-28, -0.0557867, -2.85356, -0.0615854, 0.84654)
+mesh = SubResource("ArrayMesh_d18mo")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight2" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -4.34449)
+mesh = SubResource("ArrayMesh_d18mo")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight3" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 0, 1, 0, 0.998443, 0, -0.0557867, 0.0907848, -0.0615854, -6.22142)
+mesh = SubResource("ArrayMesh_d18mo")
+skeleton = NodePath("../..")
+
+[node name="ArchGateRight4" type="MeshInstance3D" parent="Walls/Wall Decoration/Node3D32"]
+transform = Transform3D(-0.0557867, 0, -0.998443, 3.23117e-27, 1, 0, 0.998443, 0, -0.0557867, 0.181426, -0.0615854, -8.06784)
 mesh = SubResource("ArrayMesh_d18mo")
 skeleton = NodePath("../..")
 
@@ -862,7 +994,7 @@ shape = SubResource("BoxShape3D_cyd86")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.204485, 0)
 mesh_library = ExtResource("9_f2tvp")
 data = {
-"cells": PackedInt32Array(0, 65535, 32, -65536, 0, 32, 0, 65534, 33, 0, 65533, 33, 65535, 0, 33, 65535, 65533, 33, 65535, 65534, 33, 65535, 65532, 33, 65535, 65531, 33, 65535, 65530, 33, 0, 65531, 33, 0, 65530, 33, 65535, 65525, 33, 0, 65525, 33, 65535, 65523, 33, 0, 65524, 34, 65535, 65524, 34, 65535, 65521, 34, 65535, 65520, 34, 0, 65520, 34, 0, 65521, 34, 65535, 65522, 34, 2, 2, 66, 2, 1, 66, 2, 0, 66, 2, 65535, 66, 2, 65534, 66, 2, 65533, 66, 2, 65532, 66, 2, 65531, 66, 2, 65530, 66, 2, 65529, 66, 2, 65528, 66, 2, 65527, 66, 2, 65526, 66, 2, 65525, 66, 2, 65524, 66, 2, 65523, 66, 2, 65522, 66, 2, 65521, 66, 2, 65520, 66, 2, 65519, 66, 2, 65518, 66, 2, 65517, 66, 2, 65516, 66, 65534, 2, 66, 65534, 1, 66, 65534, 0, 66, 65533, 0, 66, 65533, 65535, 66, 65533, 65534, 66, 65533, 65533, 66, 65533, 65532, 66, 65533, 65531, 66, 65533, 65530, 66, 65534, 65530, 66, 65534, 65531, 66, 65534, 65532, 66, 65534, 65533, 66, 65534, 65534, 66, 65534, 65535, 66, 65533, 65529, 66, 65533, 65528, 66, 65533, 65527, 66, 65533, 65526, 66, 65533, 65525, 66, 65533, 65524, 66, 65533, 65523, 66, 65533, 65522, 66, 65533, 65521, 66, 65533, 65520, 66, 65533, 65519, 66, 65533, 65518, 66, 65533, 65517, 66, 65533, 65516, 66, 65534, 65515, 66, 65534, 65514, 66, 65534, 65513, 66, 65534, 65512, 66, 65534, 65511, 66, 65534, 65510, 66, 65534, 65509, 66, 65534, 65508, 66, 65534, 65507, 66, 65534, 65506, 66, 65534, 65505, 66, 65534, 65504, 66, 65534, 65516, 66, 65534, 65517, 66, 65534, 65518, 66, 65534, 65519, 66, 65534, 65520, 66, 65534, 65521, 66, 65534, 65522, 66, 65534, 65523, 66, 65534, 65524, 66, 65534, 65525, 66, 65534, 65526, 66, 65534, 65527, 66, 65534, 65528, 66, 65534, 65529, 66, 65533, 2, 66, 65534, 3, 66, 65534, 4, 66, 65533, 3, 66, 65533, 4, 66, 65533, 1, 66, 65533, 65515, 66, 65533, 65514, 66, 65533, 65513, 66, 65533, 65512, 66, 65533, 65511, 66, 65533, 65510, 66, 65533, 65509, 66, 65533, 65507, 66, 65533, 65506, 66, 65533, 65505, 66, 65533, 65504, 66, 65533, 65503, 66, 65533, 65502, 66, 65533, 65501, 66, 65533, 65500, 66, 65533, 65499, 66, 65533, 65498, 66, 65533, 65497, 66, 65533, 65496, 66, 65533, 65495, 66, 65533, 65494, 66, 65533, 65493, 66, 65533, 65492, 66, 65533, 65491, 66, 65533, 65490, 66, 65533, 65489, 66, 65533, 65488, 66, 65533, 65487, 66, 65533, 65486, 66, 65533, 65484, 66, 65533, 65483, 66, 65533, 65482, 66, 65533, 65480, 66, 65533, 65479, 66, 65533, 65477, 66, 65533, 65475, 66, 65533, 65474, 66, 65533, 65473, 66, 65533, 65478, 66, 65533, 65485, 66, 65534, 65489, 66, 65534, 65493, 66, 65534, 65495, 66, 65534, 65498, 66, 65534, 65500, 66, 65534, 65501, 66, 65534, 65503, 66, 65534, 5, 66, 65533, 5, 66, 1, 2, 66, 1, 1, 66, 1, 0, 66, 1, 65535, 66, 1, 65534, 66, 1, 65533, 66, 1, 65532, 66, 1, 65531, 66, 1, 65530, 66, 1, 65529, 66, 1, 65528, 66, 1, 65527, 66, 1, 65526, 66, 1, 65525, 66, 1, 65524, 66, 1, 65523, 66, 1, 65522, 66, 1, 65521, 66, 1, 65520, 66, 1, 65519, 66, 1, 65518, 66, 1, 65516, 66, 1, 65515, 66, 1, 65514, 66, 1, 65513, 66, 1, 65512, 66, 1, 65511, 66, 1, 65510, 66, 1, 65508, 66, 1, 65507, 66, 1, 65506, 66, 1, 65505, 66, 1, 65504, 66, 1, 65503, 66, 1, 65502, 66, 1, 65501, 66, 1, 3, 66, 2, 3, 66, 2, 65514, 66, 2, 65513, 66, 2, 65512, 66, 3, 65512, 66, 3, 65511, 66, 3, 65510, 66, 3, 65509, 66, 3, 65508, 66, 3, 65507, 66, 3, 65506, 66, 3, 65505, 66, 3, 65504, 66, 2, 65504, 66, 3, 65503, 66, 2, 65503, 66)
+"cells": PackedInt32Array(0, 65535, 32, -65536, 0, 32, 0, 65534, 33, 0, 65533, 33, 65535, 0, 33, 65535, 65533, 33, 65535, 65534, 33, 65535, 65532, 33, 65535, 65531, 33, 65535, 65530, 33, 0, 65531, 33, 0, 65530, 33, 65535, 65525, 33, 0, 65525, 33, 65535, 65523, 33, 0, 65524, 34, 65535, 65524, 34, 65535, 65521, 34, 65535, 65520, 34, 0, 65520, 34, 0, 65521, 34, 65535, 65522, 34, 2, 2, 66, 2, 1, 66, 2, 0, 66, 2, 65535, 66, 2, 65534, 66, 2, 65533, 66, 2, 65532, 66, 2, 65531, 66, 2, 65530, 66, 2, 65529, 66, 2, 65528, 66, 2, 65527, 66, 2, 65526, 66, 2, 65525, 66, 2, 65524, 66, 2, 65523, 66, 2, 65522, 66, 2, 65521, 66, 2, 65520, 66, 2, 65519, 66, 2, 65518, 64, 2, 65517, 64, 2, 65516, 64, 65534, 2, 66, 65534, 1, 66, 65534, 0, 66, 65533, 0, 66, 65533, 65535, 66, 65533, 65534, 66, 65533, 65533, 66, 65533, 65532, 66, 65533, 65531, 66, 65533, 65530, 66, 65534, 65530, 66, 65534, 65531, 66, 65534, 65532, 66, 65534, 65533, 66, 65534, 65534, 66, 65534, 65535, 66, 65533, 65529, 66, 65533, 65528, 66, 65533, 65527, 66, 65533, 65526, 66, 65533, 65525, 66, 65533, 65524, 66, 65533, 65523, 66, 65533, 65522, 66, 65533, 65521, 66, 65533, 65520, 66, 65533, 65519, 66, 65533, 65518, 66, 65533, 65517, 64, 65533, 65516, 64, 65534, 65515, 64, 65534, 65514, 64, 65534, 65513, 64, 65534, 65512, 64, 65534, 65511, 64, 65534, 65510, 64, 65534, 65509, 64, 65534, 65508, 64, 65534, 65507, 64, 65534, 65506, 64, 65534, 65505, 64, 65534, 65504, 64, 65534, 65516, 64, 65534, 65517, 64, 65534, 65518, 64, 65534, 65519, 64, 65534, 65520, 66, 65534, 65521, 66, 65534, 65522, 66, 65534, 65523, 66, 65534, 65524, 66, 65534, 65525, 66, 65534, 65526, 66, 65534, 65527, 66, 65534, 65528, 66, 65534, 65529, 66, 65533, 2, 66, 65534, 3, 66, 65534, 4, 66, 65533, 3, 66, 65533, 4, 66, 65533, 1, 66, 65533, 65515, 64, 65533, 65514, 64, 65533, 65513, 64, 65533, 65512, 64, 65533, 65511, 64, 65533, 65510, 64, 65533, 65509, 64, 65533, 65507, 64, 65533, 65506, 64, 65533, 65505, 64, 65533, 65504, 64, 65533, 65503, 64, 65533, 65502, 64, 65533, 65501, 64, 65533, 65500, 64, 65533, 65499, 64, 65533, 65498, 64, 65533, 65497, 64, 65533, 65496, 64, 65533, 65495, 64, 65533, 65494, 64, 65533, 65493, 64, 65533, 65492, 64, 65533, 65491, 64, 65533, 65490, 64, 65533, 65489, 64, 65533, 65488, 64, 65533, 65487, 64, 65533, 65486, 64, 65533, 65484, 64, 65533, 65483, 64, 65533, 65482, 64, 65533, 65480, 64, 65533, 65479, 64, 65533, 65477, 64, 65533, 65475, 66, 65533, 65474, 66, 65533, 65473, 66, 65533, 65478, 64, 65533, 65485, 64, 65534, 65489, 64, 65534, 65493, 66, 65534, 65495, 66, 65534, 65498, 64, 65534, 65500, 64, 65534, 65501, 64, 65534, 65503, 64, 65534, 5, 66, 65533, 5, 66, 1, 2, 66, 1, 1, 66, 1, 0, 66, 1, 65535, 66, 1, 65534, 66, 1, 65533, 66, 1, 65532, 66, 1, 65531, 66, 1, 65530, 66, 1, 65529, 66, 1, 65528, 66, 1, 65527, 66, 1, 65526, 66, 1, 65525, 66, 1, 65524, 66, 1, 65523, 66, 1, 65522, 66, 1, 65521, 66, 1, 65520, 66, 1, 65519, 66, 1, 65518, 64, 1, 65516, 66, 1, 65515, 66, 1, 65514, 66, 1, 65513, 64, 1, 65512, 64, 1, 65511, 64, 1, 65510, 64, 1, 65508, 66, 1, 65507, 66, 1, 65506, 66, 1, 65505, 66, 1, 65504, 64, 1, 65503, 64, 1, 65502, 64, 1, 65501, 64, 1, 3, 66, 2, 3, 66, 2, 65514, 64, 2, 65513, 64, 2, 65512, 64, 3, 65512, 66, 3, 65511, 66, 3, 65510, 66, 3, 65509, 66, 3, 65508, 66, 3, 65507, 66, 3, 65506, 66, 3, 65505, 66, 3, 65504, 66, 2, 65504, 64, 3, 65503, 66, 2, 65503, 64, 1, 65517, 64, 2, 65515, 64, 2, 65510, 64, 2, 65511, 64, 2, 65505, 64, 1, 65500, 64, 1, 65499, 64, 2, 65499, 64, 2, 65500, 64, 2, 65501, 64, 2, 65502, 64, 2, 65506, 64, 2, 65507, 64, 2, 65508, 64, 65533, 65508, 64, 65534, 65497, 64, 65534, 65499, 64, 65534, 65502, 64, 65534, 65492, 64, 65534, 65491, 64, 65534, 65490, 64, 65534, 65488, 64, 65534, 65487, 64, 65534, 65486, 64, 65534, 65485, 64, 65534, 65484, 64, 65534, 65483, 64, 65534, 65482, 64, 65534, 65481, 64, 65534, 65480, 64, 65534, 65479, 64, 65534, 65478, 64, 65534, 65477, 64, 65533, 65481, 64, 2, 65496, 64, 2, 65495, 64, 2, 65494, 64, 2, 65493, 64, 2, 65492, 64, 2, 65491, 64, 2, 65490, 64, 2, 65489, 64, 2, 65488, 64, 2, 65487, 64, 2, 65486, 64, 2, 65485, 64, 2, 65484, 64, 2, 65483, 64, 3, 65482, 64, 3, 65481, 64, 3, 65480, 64, 3, 65479, 64, 3, 65478, 64, 3, 65477, 64, 3, 65476, 64, 3, 65475, 64, 3, 65474, 64, 3, 65473, 64, 3, 65472, 64, 2, 65473, 64, 2, 65474, 64, 2, 65475, 64, 2, 65476, 64, 2, 65477, 64, 2, 65478, 64, 2, 65479, 64, 2, 65480, 64, 2, 65481, 64, 2, 65482, 64, 1, 65489, 64, 1, 65490, 64, 1, 65491, 64, 1, 65492, 64, 1, 65493, 64, 1, 65494, 64, 1, 65495, 64, 1, 65496, 64, 1, 65497, 64, 1, 65498, 64, 2, 65498, 64, 0, 65511, 32, 65535, 65511, 32, 65535, 65510, 32, 65535, 65509, 32, 65535, 65508, 32, 65535, 65507, 32, 0, 65507, 32, 0, 65506, 32, 0, 65508, 32, 0, 65509, 32, 0, 65510, 32, 0, 65503, 32, 0, 65502, 32, 0, 65504, 32, 65535, 65504, 32, 65535, 65505, 32, 65535, 65506, 32)
 }
 script = ExtResource("10_iwf3t")
 
@@ -881,10 +1013,53 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.67921, -16.283)
 navigation_mesh = SubResource("NavigationMesh_m63qj")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -2, 0.5)
-size = Vector3(5, 1, 8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -2, -36.5099)
+size = Vector3(5, 1, 82.0198)
 
-[node name="Barbarian" parent="." instance=ExtResource("11_68kvq")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.652438, -18.7323)
+[node name="Enemies" type="Node3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.524631, 0.652438, -35.5563)
+
+[node name="Barbarian" parent="Enemies" instance=ExtResource("11_68kvq")]
+
+[node name="Barbarian2" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48926, 0, -0.700371)
+
+[node name="Barbarian5" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48926, 0, 36.9477)
+safe_margin = 19.693
+
+[node name="Barbarian6" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48926, 0, -6.47594)
+
+[node name="Barbarian8" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48926, 0, -9.82081)
+
+[node name="Barbarian3" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6797, 0, 40.0587)
+safe_margin = 6.565
+
+[node name="Barbarian7" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.489423, 0, -8.04933)
+safe_margin = 6.565
+
+[node name="Barbarian9" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.489423, 0, -14.481)
+safe_margin = 6.565
+
+[node name="Barbarian10" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.68826, 0, -14.481)
+safe_margin = 6.565
+
+[node name="Barbarian11" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22867, 0, -18.2247)
+safe_margin = 6.565
+
+[node name="Barbarian12" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.22867, 0, -21.1003)
+safe_margin = 6.565
+
+[node name="Barbarian4" parent="Enemies" instance=ExtResource("11_68kvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.328365, 0, 36.9477)
+safe_margin = 9.847
 
 [connection signal="body_entered" from="Goal/Area3D" to="." method="_on_area_3d_body_entered"]
