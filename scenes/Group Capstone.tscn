@@ -101,7 +101,7 @@ _surfaces = [{
 blend_shape_mode = 0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_cyd86"]
-size = Vector3(2.86255, 3.37451, 1)
+size = Vector3(2.86255, 3.37451, 0.483398)
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_m63qj"]
 vertices = PackedVector3Array(-2, -1, -77.0198, -2, -1, 3.98022, 2, -1, 3.98022, 2, -1, -77.0198)
@@ -987,7 +987,7 @@ spot_range = 10.612
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.711388, -36.1584)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Goal/Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.143671, 1.97396, -0.64283)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.143671, 1.97396, -0.384529)
 shape = SubResource("BoxShape3D_cyd86")
 
 [node name="GridMap" type="GridMap" parent="."]
